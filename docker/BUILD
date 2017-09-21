@@ -1,5 +1,5 @@
-# Copyright 2017 The Bazel Authors. All rights reserved.
 #
+# Copyright 2017 The Bazel Authors. All rights reserved.
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -95,9 +95,11 @@ py_binary(
     name = "create_image_config",
     srcs = ["create_image_config.py"],
     visibility = ["//visibility:public"],
+    default_python_version = "PY2",
     deps = [
         ":utils",
         "@containerregistry//:containerregistry",
+        "@bazel_tools//third_party/py/six",
     ],
 )
 
@@ -105,6 +107,7 @@ py_binary(
     name = "extract_config",
     srcs = ["extract_config.py"],
     visibility = ["//visibility:public"],
+    default_python_version = "PY2",
     deps = [
         "@containerregistry//:containerregistry",
     ],
@@ -114,6 +117,7 @@ py_binary(
     name = "join_layers",
     srcs = ["join_layers.py"],
     visibility = ["//visibility:public"],
+    default_python_version = "PY2",
     deps = [
         ":utils",
         "@containerregistry//:containerregistry",
@@ -144,6 +148,7 @@ filegroup(
 py_binary(
     name = "build_tar",
     srcs = ["build_tar.py"],
+    default_python_version = "PY2",
     srcs_version = "PY2AND3",
     visibility = ["//visibility:public"],
     deps = [
