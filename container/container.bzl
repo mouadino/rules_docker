@@ -68,7 +68,7 @@ def repositories():
       name = "httplib2",
       url = "https://codeload.github.com/httplib2/httplib2/tar.gz/v0.10.3",
       sha256 = "d1bee28a68cc665c451c83d315e3afdbeb5391f08971dcc91e060d5ba16986f1",
-      strip_prefix = "httplib2-0.10.3/python2/httplib2/",
+      strip_prefix = "httplib2-0.10.3/python3/httplib2/",
       type = "tar.gz",
       build_file_content = """
 py_library(
